@@ -17,7 +17,7 @@ sources:
     type: github
     repo_url: git@github.com:canonical/lxd.git
     branch: main
-    doc_subdir: doc/
+    doc_subdir: doc/tutorial/
     dest_dir: lxd/
 
   - name: Snap Store
