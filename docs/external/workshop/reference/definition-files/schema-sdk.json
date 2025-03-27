@@ -1,0 +1,500 @@
+{
+  "$defs": {
+    "CameraPlug": {
+      "additionalProperties": false,
+      "description": "Sdkcraft project camera plug definition.",
+      "properties": {
+        "interface": {
+          "const": "camera",
+          "title": "Interface",
+          "type": "string"
+        }
+      },
+      "required": [
+        "interface"
+      ],
+      "title": "CameraPlug",
+      "type": "object"
+    },
+    "DesktopPlug": {
+      "additionalProperties": false,
+      "description": "Sdkcraft project desktop plug definition.",
+      "properties": {
+        "interface": {
+          "const": "desktop",
+          "title": "Interface",
+          "type": "string"
+        }
+      },
+      "required": [
+        "interface"
+      ],
+      "title": "DesktopPlug",
+      "type": "object"
+    },
+    "GPUPlug": {
+      "additionalProperties": false,
+      "description": "Sdkcraft project GPU plug definition.",
+      "properties": {
+        "interface": {
+          "const": "gpu",
+          "title": "Interface",
+          "type": "string"
+        }
+      },
+      "required": [
+        "interface"
+      ],
+      "title": "GPUPlug",
+      "type": "object"
+    },
+    "MountPlug": {
+      "additionalProperties": false,
+      "description": "Sdkcraft project mount plug definition.",
+      "properties": {
+        "interface": {
+          "const": "mount",
+          "title": "Interface",
+          "type": "string"
+        },
+        "workshop-target": {
+          "title": "Workshop-Target",
+          "type": "string"
+        },
+        "read-only": {
+          "default": false,
+          "title": "Read-Only",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "interface",
+        "workshop-target"
+      ],
+      "title": "MountPlug",
+      "type": "object"
+    },
+    "MountSlot": {
+      "additionalProperties": false,
+      "description": "Sdkcraft project mount slot definition.",
+      "properties": {
+        "interface": {
+          "const": "mount",
+          "title": "Interface",
+          "type": "string"
+        },
+        "workshop-source": {
+          "title": "Workshop-Source",
+          "type": "string"
+        }
+      },
+      "required": [
+        "interface",
+        "workshop-source"
+      ],
+      "title": "MountSlot",
+      "type": "object"
+    },
+    "Platform": {
+      "additionalProperties": false,
+      "description": "Project platform definition.",
+      "properties": {
+        "build-on": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array",
+              "uniqueItems": true
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Build-On"
+        },
+        "build-for": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 1,
+              "minItems": 1,
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Build-For"
+        }
+      },
+      "required": [
+        "build-on"
+      ],
+      "title": "Platform",
+      "type": "object"
+    },
+    "SSHPlug": {
+      "additionalProperties": false,
+      "description": "Sdkcraft project SSH plug definition.",
+      "properties": {
+        "interface": {
+          "const": "ssh",
+          "title": "Interface",
+          "type": "string"
+        }
+      },
+      "required": [
+        "interface"
+      ],
+      "title": "SSHPlug",
+      "type": "object"
+    },
+    "TunnelPlug": {
+      "additionalProperties": false,
+      "description": "Sdkcraft project tunnel plug definition.",
+      "properties": {
+        "interface": {
+          "const": "tunnel",
+          "title": "Interface",
+          "type": "string"
+        },
+        "endpoint": {
+          "default": "",
+          "title": "Endpoint",
+          "type": "string"
+        }
+      },
+      "required": [
+        "interface"
+      ],
+      "title": "TunnelPlug",
+      "type": "object"
+    },
+    "TunnelSlot": {
+      "additionalProperties": false,
+      "description": "Sdkcraft project tunnel plug definition.",
+      "properties": {
+        "interface": {
+          "const": "tunnel",
+          "title": "Interface",
+          "type": "string"
+        },
+        "endpoint": {
+          "default": "",
+          "title": "Endpoint",
+          "type": "string"
+        }
+      },
+      "required": [
+        "interface"
+      ],
+      "title": "TunnelSlot",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Sdkcraft project definition.",
+  "properties": {
+    "name": {
+      "description": "The name of this project. This is used when uploading, publishing, or installing.\n\nProject name rules:\n* Valid characters are lower-case ASCII letters, numerals and hyphens.\n* Must contain at least one letter\n* May not start or end with a hyphen\n* May not have two hyphens in a row\n",
+      "examples": [
+        "ubuntu",
+        "jupyterlab-desktop",
+        "lxd",
+        "digikam",
+        "kafka",
+        "mysql-router-k8s"
+      ],
+      "maxLength": 40,
+      "minLength": 1,
+      "title": "Project Name",
+      "type": "string"
+    },
+    "title": {
+      "anyOf": [
+        {
+          "description": "A human-readable title.",
+          "examples": [
+            "Ubuntu Linux",
+            "Jupyter Lab Desktop",
+            "LXD",
+            "DigiKam",
+            "Apache Kafka",
+            "MySQL Router K8s charm"
+          ],
+          "maxLength": 40,
+          "minLength": 2,
+          "title": "Title",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Title"
+    },
+    "version": {
+      "anyOf": [
+        {
+          "description": "A string containing the version of the project",
+          "examples": [
+            "0.1",
+            "1.0.0",
+            "v1.0.0",
+            "24.04"
+          ],
+          "maxLength": 32,
+          "title": "version string",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Version"
+    },
+    "summary": {
+      "anyOf": [
+        {
+          "description": "A short description of your project.",
+          "examples": [
+            "Linux for Human Beings",
+            "The cross-platform desktop application for JupyterLab",
+            "Container and VM manager",
+            "Photo Management Program",
+            "Charm for routing MySQL databases in Kubernetes",
+            "An open-source event streaming platform for high-performance data pipelines"
+          ],
+          "maxLength": 78,
+          "title": "Summary",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Summary"
+    },
+    "description": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Description"
+    },
+    "base": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Base"
+    },
+    "build-base": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Build-Base"
+    },
+    "platforms": {
+      "additionalProperties": {
+        "$ref": "#/$defs/Platform"
+      },
+      "title": "Platforms",
+      "type": "object"
+    },
+    "contact": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Contact"
+    },
+    "issues": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Issues"
+    },
+    "source-code": {
+      "anyOf": [
+        {
+          "format": "uri",
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source-Code"
+    },
+    "license": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "License"
+    },
+    "adopt-info": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Adopt-Info"
+    },
+    "parts": {
+      "additionalProperties": {
+        "type": "object"
+      },
+      "default": {
+        "default-part": {
+          "plugin": "nil"
+        }
+      },
+      "title": "Parts",
+      "type": "object"
+    },
+    "package-repositories": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "object"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Package-Repositories"
+    },
+    "plugs": {
+      "additionalProperties": {
+        "discriminator": {
+          "mapping": {
+            "camera": "#/$defs/CameraPlug",
+            "desktop": "#/$defs/DesktopPlug",
+            "gpu": "#/$defs/GPUPlug",
+            "mount": "#/$defs/MountPlug",
+            "ssh": "#/$defs/SSHPlug",
+            "tunnel": "#/$defs/TunnelPlug"
+          },
+          "propertyName": "interface"
+        },
+        "oneOf": [
+          {
+            "$ref": "#/$defs/CameraPlug"
+          },
+          {
+            "$ref": "#/$defs/DesktopPlug"
+          },
+          {
+            "$ref": "#/$defs/GPUPlug"
+          },
+          {
+            "$ref": "#/$defs/MountPlug"
+          },
+          {
+            "$ref": "#/$defs/SSHPlug"
+          },
+          {
+            "$ref": "#/$defs/TunnelPlug"
+          }
+        ]
+      },
+      "default": {},
+      "title": "Plugs",
+      "type": "object"
+    },
+    "slots": {
+      "additionalProperties": {
+        "discriminator": {
+          "mapping": {
+            "mount": "#/$defs/MountSlot",
+            "tunnel": "#/$defs/TunnelSlot"
+          },
+          "propertyName": "interface"
+        },
+        "oneOf": [
+          {
+            "$ref": "#/$defs/MountSlot"
+          },
+          {
+            "$ref": "#/$defs/TunnelSlot"
+          }
+        ]
+      },
+      "default": {},
+      "title": "Slots",
+      "type": "object"
+    }
+  },
+  "required": [
+    "name",
+    "platforms"
+  ],
+  "title": "Project",
+  "type": "object"
+}

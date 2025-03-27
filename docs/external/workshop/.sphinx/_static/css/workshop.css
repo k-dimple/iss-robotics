@@ -1,0 +1,14 @@
+.program {
+    font-weight: normal;
+}
+
+.command,
+blockquote{
+    font-family: monospace;
+    font-size: large;
+    font-weight: normal;
+}
+
+blockquote {
+    background: #f8f8f8;
+}

@@ -1,0 +1,51 @@
+sources:
+  - name: Workshop (development) 
+    type: github
+    repo_url: git@github.com:canonical/workshop.git
+    branch: main
+    doc_subdir: docs/
+    dest_dir: workshop/
+
+  - name: Snapcraft (packaging)
+    type: github
+    repo_url: git@github.com:canonical/snapcraft.git
+    branch: main
+    doc_subdir: docs/
+    dest_dir: snapcraft/
+  
+  - name: LXD containers (testing)
+    type: github
+    repo_url: git@github.com:canonical/lxd.git
+    branch: main
+    doc_subdir: doc/
+    dest_dir: lxd/
+
+  - name: Snap Store
+    type: github
+    repo_url: git@github.com:canonical/brand-store-documentation.git
+    branch: main
+    doc_subdir: docs/
+    dest_dir: snap-store/
+  
+  - name: Ubuntu Core
+    type: github
+    repo_url: git@github.com:canonical/ubuntu-core-docs.git
+    branch: main
+    doc_subdir: docs/
+    dest_dir: ubuntu-core/
+
+  - name: Canonical Observability Stack (COS)   
+    type: discourse
+    discourse_url: https://discourse.charmhub.io/
+    pages:
+      - topic_id: 5199
+        title: Getting started on MicroK8s
+        filename: install-microk8s.md
+    dest_dir: cos/
+
+  - name: Juju - manage deployment
+    type: github
+    repo_url: git@github.com:juju/juju.git
+    branch: main
+    doc_subdir: docs/user/howto/manage-your-deployment
+    dest_dir: juju/
