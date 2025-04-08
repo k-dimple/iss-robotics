@@ -6,6 +6,14 @@ sources:
     doc_subdir: docs/
     dest_dir: workshop/
     category: "Development" 
+
+  - name: Snapcraft (packaging)
+    type: github
+    repo_url: git@github.com:canonical/snapcraft.git
+    branch: main
+    doc_subdir: docs/
+    dest_dir: snapcraft/
+    category: "Development" 
   
   - name: LXD containers (testing)
     type: github
@@ -14,6 +22,21 @@ sources:
     doc_subdir: doc/tutorial/
     dest_dir: lxd/
     category: "Development"
+
+  - name: Snap Store
+    type: github
+    repo_url: git@github.com:canonical/brand-store-documentation.git
+    branch: main
+    doc_subdir: docs/
+    dest_dir: snap-store/
+
+  - name: Ubuntu Core
+    type: github
+    repo_url: git@github.com:canonical/ubuntu-core-docs.git
+    branch: main
+    doc_subdir: docs/
+    dest_dir: ubuntu-core/
+    category: "Robot device"
  
   - name: Canonical Observability Stack (COS)   
     type: discourse
@@ -23,3 +46,12 @@ sources:
         title: Getting started on MicroK8s
         filename: install-microk8s.md
     dest_dir: cos/
+    category: "COS Server"
+
+  - name: Juju - manage deployment
+    type: github
+    repo_url: git@github.com:juju/juju.git
+    branch: main
+    doc_subdir: docs/howto/manage-your-deployment
+    dest_dir: juju/
+    category: "COS Server"

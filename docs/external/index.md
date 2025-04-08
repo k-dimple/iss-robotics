@@ -3,13 +3,16 @@
 ```{toctree}
 :maxdepth: 1
 
+COS Server/index
 Development/index
+Robot device/index
+
 ```
 
 ```{toctree}
 :maxdepth: 1
 
-Canonical Observability Stack (COS) <cos/index.md>
+Snap Store <snap-store/index.rst>
 
 ```
 
