@@ -202,11 +202,11 @@ Once a valid model key is available, create and sign the model assertion for you
 
 Log in to the web dashboard as ``{{CUSTOMER_ADMIN_EMAIL}}`` (because it has the Admin role on the ``{{CUSTOMER_DEVICEVIEW_NAME}}`` store), access the `View and manage snaps <https://snapcraft.io/admin>`_ page. Use the “Include snap” dialog to ensure that all snaps listed in the model assertion but published in the Global Snap Store (like pc-kernel in this case) get included in your Dedicated Snap Store. The core, core18, core20, core22, core24 and snapd snaps are included automatically and cannot be removed.
 
-.. image:: /images/core-22-add-snap.png
+.. image:: ../images/core-22-add-snap.png
 
 Access the snap page https://dashboard.snapcraft.io/snaps/<prefix>-pc to get the snap-id and fill the fields ``<CUSTOMER_SNAP_IDS>`` and ``<CUSTOMER_REQUIRED_SNAPS>``.
 
-.. image:: /images/core-22-snap-id.png
+.. image:: ../images/core-22-snap-id.png
 
 Switching to a developer account
 --------------------------------

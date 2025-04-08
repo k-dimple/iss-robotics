@@ -23,7 +23,7 @@ There are a few points to note about Base Stores and Device View Stores. Firstly
 
 Additionally, for image builds, developers can use their SSO credentials to download snaps from the dedicated Snap Store (please see the Switching to a Developer Account section).The authentication method used by devices is described below.
 
-![Illustration of the App Store architecture, demonstrating use of a combination of public and private snaps](/images/store-architecture.png)
+![Illustration of the App Store architecture, demonstrating use of a combination of public and private snaps](../images/store-architecture.png)
 
 *A standard store configuration using a Base and Device store*
 

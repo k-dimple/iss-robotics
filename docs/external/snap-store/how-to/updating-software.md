@@ -13,7 +13,7 @@ Our technology implements delta updates, when they are available. This means tha
 
 Software updates are not necessarily applied to devices when they are fetched automatically. You can determine what specific software revisions get applied to your fleet. Decoupling software updates from installation allows time for testing and validating new revisions before they are applied. The [Snap Store Proxy](https://documentation.ubuntu.com/snap-store-proxy/) provides a way to override revisions of specific snaps for all connected devices, and allows you to execute updates in an environment with limited or no network access.
 
-![The ‘Releases’ dashboard from snapcraft.io](/images/updating-software.png)
+![The ‘Releases’ dashboard from snapcraft.io](../images/updating-software.png)
 
 *The ‘Releases’ dashboard from snapcraft.io*
 
