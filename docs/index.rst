@@ -3,7 +3,7 @@ Robotics
 
 The robotics offering from Canonical is a complete suite of technologies that help you develop, package, deploy, maintain and observe your robotics application. An overview of how the different technologies interact with each other is shown below. 
 
-.. figure:: https://assets.ubuntu.com/v1/197d90b2-Robotics%20stack_from%20Geoffrey.jpg
+.. figure:: robotics_stack.png
    :alt: Components involved in robotics
 
    Robotics: An overview
@@ -23,7 +23,7 @@ It is difficult to understand and use the robotics solution without a basic unde
 
    .. grid-item:: :doc:`Related technologies <external/index>`
 
-      **Underlying technologies used** - Relevant documentation of each related technology: SDK/Worksop, Snapcraft, Snap store, LXD containers, ROS, Ubuntu Core, COS, Juju and Charmhub   
+      **Underlying technologies used** - Relevant documentation of each related technology: Snapcraft, Snap store, LXD containers, ROS, Ubuntu Core, COS, Juju and Charmhub   
 
 
 

@@ -1,12 +1,4 @@
 sources:
-  - name: Workshop (development) 
-    type: github
-    repo_url: git@github.com:canonical/workshop.git
-    branch: main
-    doc_subdir: docs/
-    dest_dir: workshop/
-    category: "Development" 
-
   - name: Snapcraft (packaging)
     type: github
     repo_url: git@github.com:canonical/snapcraft.git
