@@ -9,8 +9,6 @@ The model contains:
 
 See below for details on how to download and modify a model file to include your own selection of snaps.
 
----
-
 ## Download a model file
 
 The quickest way to create a new model assertion is to edit a model that already exists. Reference models for every supported Ubuntu Core device can be found in the [snapcore/models](https://github.com/snapcore/models) GitHub repository.
@@ -120,31 +118,31 @@ After finishing all your edits, the completed **my-model.json** text file should
         {
             "name": "pi",
             "type": "gadget",
-            "default-channel": "24/edge",
+            "default-channel": "24/stable",
             "id": "YbGa9O3dAXl88YLI6Y1bGG74pwBxZyKg"
         },
         {
             "name": "pi-kernel",
             "type": "kernel",
-            "default-channel": "24/edge",
+            "default-channel": "24/stable",
             "id": "jeIuP6tfFrvAdic8DMWqHmoaoukAPNbJ"
         },
         {
             "name": "core24",
             "type": "base",
-            "default-channel": "latest/edge",
+            "default-channel": "latest/stable",
             "id": "dwTAh7MZZ01zyriOZErqd1JynQLiOGvM"
         },
         {
             "name": "snapd",
             "type": "snapd",
-            "default-channel": "latest/edge",
+            "default-channel": "latest/stable",
             "id": "PMrrV4ml8uWuEUDBT8dSGnKUYbevVhc4"
         },
         {
             "name": "console-conf",
             "type": "app",
-            "default-channel": "24/edge",
+            "default-channel": "24/stable",
             "id": "ASctKBEHzVt3f1pbZLoekCvcigRjtuqw"
         },
         {

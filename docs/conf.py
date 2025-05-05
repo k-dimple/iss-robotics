@@ -135,7 +135,7 @@ html_context = {
     # Docs branch in the repo; used in links for viewing the source files
     #
     # TODO: To customise the branch, uncomment and update as needed.
-    'repo_default_branch': 'main',
+    'repo_version': 'main',
     # Docs location in the repo; used in links for viewing the source files
     #
 
@@ -241,8 +241,6 @@ extensions = [
     "sphinx_last_updated_by_git",
 ]
 
-myst_heading_anchors = 3
-
 # Excludes files or directories from processing
 
 exclude_patterns = [
@@ -265,6 +263,7 @@ html_css_files = [
 
 rst_epilog = """
 .. include:: /reuse/links.txt
+.. include:: /reuse/substitutions.txt
 """
 
 # Feedback button at the top; enabled by default

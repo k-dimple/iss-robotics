@@ -1,0 +1,12 @@
+.. workshop:
+.. |ws_markup| replace:: :program:`Workshop`
+.. |sdk_markup| replace:: :program:`SDKcraft`
+
+.. workshop:
+.. |ws_markup| replace:: :program:`Workshop`
+.. |sdk_markup| replace:: :program:`SDKcraft`
+
+.. workshop:
+.. |ws_markup| replace:: :program:`Workshop`
+.. |sdk_markup| replace:: :program:`SDKcraft`
+

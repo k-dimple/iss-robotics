@@ -1,27 +1,25 @@
 (reference-assertions-store)=
 # store
 
-
 The store assertion defines the configuration needed to connect a device to a store.  The `friendly-stores` list enables the creation of trust relationships to other stores.
 
-```text
+```yaml
 type: store
-authority-id:	   <authority account id>
-store:			   <store name>
+authority-id:      <authority account id>
+store:             <store name>
 friendly-stores:   <list of trusted store names> # Their snaps will be made available to the store.
-operator-id: 	   <account id>
-url: 			   <optional api url>
-location: 		   <optional location string>
-timestamp:		   <UTC datetime>
-sign-key-sha3-384: <key id> # Encoded key id of signing key
+operator-id:       <account id>
+url:               <optional api url>
+location:          <optional location string>
+timestamp:         <UTC datetime>
+sign-key-sha3-384: <key id>                      # Encoded key id of signing key
 
-<signature>                 # Encoded signature
-
+<signature>                                      # Encoded signature
 ```
 
 The following is a complete example store assertion:
 
-```text
+```yaml
 type: store
 authority-id: canonical
 store: UDifxuoKrcYe65492eDA
@@ -42,4 +40,3 @@ nMGfZJ6Xgr/U4MYHysEifFttUisttvI87HKQEfJU96g0rHPFt/x+PU2tUYz0+2O7y/wjRGXemOaq
 xpG0hzLc6zTR32rqx3fO3H+0031xVozUNJxvkk6sg2omCGY9yaTwyKn6QvXs0FI48JqEKr9cdV7v
 rbT86NActIgyBDX8ofx/Vz3kvuDi
 ```
-
